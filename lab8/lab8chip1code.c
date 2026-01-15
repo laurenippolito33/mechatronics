@@ -98,4 +98,5 @@ void wait(volatile int number_of_msec) {
 		TCCR0B = 0x00; // Stop TIMER0
 		number_of_msec--;
 	}
+
 } // end wait()
