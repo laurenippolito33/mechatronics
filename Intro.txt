@@ -1,0 +1,1 @@
+Hello, my name is Lauren Ippolito. This repository includes the code I used for a mechatronics class I took my junior year at the University of Pittsburgh (MEMS 1049).
