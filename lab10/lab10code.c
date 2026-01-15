@@ -81,10 +81,10 @@ int main(void)
 		i2c_stop();
 		// convert data to a number
 		data_high = data_high & 0x1F; //Clear upper three flag bits
-		if ((data_high & 0x10) == 0x10){ //TA < 0°C
+		if ((data_high & 0x10) == 0x10){ //TA < 0Â°C
 			data_high = data_high & 0x0F; //Clear SIGN bit
 			Temperature = 256 - (data_high * 16 + data_low / 16);
-		}else //TA > 0°C
+		}else //TA > 0Â°C
 		Temperature = (data_high * 16 + data_low / 16);
 		
 		TemperatureF = (Temperature*(9.0/5.0))+32;
@@ -219,6 +219,7 @@ void i2c_write_data( unsigned char data) { //Write data byte to the I2C2 bus
 	// if ((TWSR & 0xF8) != MT_DATA_ACK) // error checking -- need to predefine MT_DATA_ACK and ERROR() function depending on possible outcomes: 0x28 or 0x30.
 	//ERROR();
 }
+
 
 
 
